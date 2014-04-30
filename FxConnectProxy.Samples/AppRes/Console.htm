@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Console</title>
+        <style type="text/css">
+            html, body { display: block; margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; position: relative; }
+            #console { height: 100%; overflow: auto; white-space: nowrap; box-sizing: border-box; width: 100%; }
+            .normal { color: #505050; }
+            .start { color: #000000; }
+            .description { color: #707070; font-style: italic; }
+        </style>
+        <script type="text/javascript">{jQuery}</script>
+	</head>
+	<body>
+        <div id="console"></div>
+        <script type="text/javascript">
+            var __Limit = 100;
+
+            function AddLine(text, cssClass) {
+                cssClass = cssClass || 'normal';
+                var $c = $('#console');
+                var c = $c.get(0);
+
+                while (c.childNodes.length >= __Limit) {
+                    var child = c.childNodes[0];
+                    $(child).remove();
+                }
+
+                var $d = $("<div class="+cssClass+" />");
+                $d.html(text || '&nbsp;');
+                $c.append($d);
+            }
+
+            function Clear() {
+                $('#console').empty();
+            }
+        </script>
+	</body>
+</html>
