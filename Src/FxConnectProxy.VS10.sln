@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FxConnectProxy", "FxConnectProxy\FxConnectProxy.csproj", "{305AD36D-A16D-4DC5-88C1-E3A672E47609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FxConnectProxy.ForexConnect", "FxConnectProxy.ForexConnect\FxConnectProxy.ForexConnect.csproj", "{6513A52C-0861-422B-B996-8A02AA06D4CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{DAF11F15-78E1-423C-BF81-A7108C94BD94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fxcore2", "fxcore2", "{C75EAB60-137D-4DED-9F28-832B1A9162D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{9BD97055-8A52-4AA5-BF7A-2439CDDA9B0C}"
+	ProjectSection(SolutionItems) = preProject
+		..\Libs\fxcore2\x64\ForexConnect.dll = ..\Libs\fxcore2\x64\ForexConnect.dll
+		..\Libs\fxcore2\x64\fxcore2.dll = ..\Libs\fxcore2\x64\fxcore2.dll
+		..\Libs\fxcore2\x64\fxmsg.dll = ..\Libs\fxcore2\x64\fxmsg.dll
+		..\Libs\fxcore2\x64\gsexpat.dll = ..\Libs\fxcore2\x64\gsexpat.dll
+		..\Libs\fxcore2\x64\gstool3.dll = ..\Libs\fxcore2\x64\gstool3.dll
+		..\Libs\fxcore2\x64\gszlib.dll = ..\Libs\fxcore2\x64\gszlib.dll
+		..\Libs\fxcore2\x64\httplib.dll = ..\Libs\fxcore2\x64\httplib.dll
+		..\Libs\fxcore2\x64\log4cplus.dll = ..\Libs\fxcore2\x64\log4cplus.dll
+		..\Libs\fxcore2\x64\msvcp80.dll = ..\Libs\fxcore2\x64\msvcp80.dll
+		..\Libs\fxcore2\x64\msvcr100.dll = ..\Libs\fxcore2\x64\msvcr100.dll
+		..\Libs\fxcore2\x64\msvcr80.dll = ..\Libs\fxcore2\x64\msvcr80.dll
+		..\Libs\fxcore2\x64\pdas.dll = ..\Libs\fxcore2\x64\pdas.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{86476552-2CB6-4464-984E-747A59C99C4E}"
+	ProjectSection(SolutionItems) = preProject
+		..\Libs\fxcore2\x86\ForexConnect.dll = ..\Libs\fxcore2\x86\ForexConnect.dll
+		..\Libs\fxcore2\x86\fxcore2.dll = ..\Libs\fxcore2\x86\fxcore2.dll
+		..\Libs\fxcore2\x86\fxmsg.dll = ..\Libs\fxcore2\x86\fxmsg.dll
+		..\Libs\fxcore2\x86\gsexpat.dll = ..\Libs\fxcore2\x86\gsexpat.dll
+		..\Libs\fxcore2\x86\gstool3.dll = ..\Libs\fxcore2\x86\gstool3.dll
+		..\Libs\fxcore2\x86\gszlib.dll = ..\Libs\fxcore2\x86\gszlib.dll
+		..\Libs\fxcore2\x86\httplib.dll = ..\Libs\fxcore2\x86\httplib.dll
+		..\Libs\fxcore2\x86\log4cplus.dll = ..\Libs\fxcore2\x86\log4cplus.dll
+		..\Libs\fxcore2\x86\msvcp80.dll = ..\Libs\fxcore2\x86\msvcp80.dll
+		..\Libs\fxcore2\x86\msvcr100.dll = ..\Libs\fxcore2\x86\msvcr100.dll
+		..\Libs\fxcore2\x86\msvcr80.dll = ..\Libs\fxcore2\x86\msvcr80.dll
+		..\Libs\fxcore2\x86\pdas.dll = ..\Libs\fxcore2\x86\pdas.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{305AD36D-A16D-4DC5-88C1-E3A672E47609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305AD36D-A16D-4DC5-88C1-E3A672E47609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305AD36D-A16D-4DC5-88C1-E3A672E47609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305AD36D-A16D-4DC5-88C1-E3A672E47609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6513A52C-0861-422B-B996-8A02AA06D4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6513A52C-0861-422B-B996-8A02AA06D4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6513A52C-0861-422B-B996-8A02AA06D4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6513A52C-0861-422B-B996-8A02AA06D4CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C75EAB60-137D-4DED-9F28-832B1A9162D5} = {DAF11F15-78E1-423C-BF81-A7108C94BD94}
+		{9BD97055-8A52-4AA5-BF7A-2439CDDA9B0C} = {C75EAB60-137D-4DED-9F28-832B1A9162D5}
+		{86476552-2CB6-4464-984E-747A59C99C4E} = {C75EAB60-137D-4DED-9F28-832B1A9162D5}
+	EndGlobalSection
+EndGlobal
