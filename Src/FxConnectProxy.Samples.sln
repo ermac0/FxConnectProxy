@@ -47,6 +47,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FxConnectProxy.Samples", "F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{413963AC-89EB-4AA2-9444-CA48C11E812F}"
 	ProjectSection(SolutionItems) = preProject
+		..\License = ..\License
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
