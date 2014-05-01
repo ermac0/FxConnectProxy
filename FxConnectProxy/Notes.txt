@@ -1,7 +1,0 @@
-﻿O2GMarketDataSnapshotResponseReader doesn't have instrument property - requires additional structure to hold RequestID and associated Instrument to obtain that info.
-
-Some calls require passing O2GAccountRow, which in turn require us to keep that object associated with our AccountRow. It's very unlikely that the
-entire structure is necessary to make those calls.
-
-O2G objects are readonly, and do not expose/implement "readonly" interfaces that would allow for unit tests where
-those objects could be faked, thus breaking reliance on the backend system.
