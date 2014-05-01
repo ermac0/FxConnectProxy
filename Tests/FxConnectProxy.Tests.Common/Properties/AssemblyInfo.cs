@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿// Copyright (c) 2014 Patrick Pulka
+// License: https://raw.githubusercontent.com/ermac0/FxConnectProxy/master/LICENSE
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 

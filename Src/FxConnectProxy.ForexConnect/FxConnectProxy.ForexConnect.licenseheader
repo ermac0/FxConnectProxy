@@ -1,0 +1,17 @@
+extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+// Copyright (c) 2014 Patrick Pulka
+// License: https://raw.githubusercontent.com/ermac0/FxConnectProxy/master/LICENSE
+extensions: .aspx .ascx
+<%-- 
+ Copyright (c) 2014 Patrick Pulka
+ License: https://raw.githubusercontent.com/ermac0/FxConnectProxy/master/LICENSE
+--%>
+extensions: .vb
+'Copyright (c) 2014 Patrick Pulka
+'License: https://raw.githubusercontent.com/ermac0/FxConnectProxy/master/LICENSE
+extensions:  .xml .config .xsd
+<!--
+ Copyright (c) 2014 Patrick Pulka
+ License: https://raw.githubusercontent.com/ermac0/FxConnectProxy/master/LICENSE
+-->

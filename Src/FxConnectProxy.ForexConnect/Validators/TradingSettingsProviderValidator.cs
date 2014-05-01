@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Copyright (c) 2014 Patrick Pulka
+// License: https://raw.githubusercontent.com/ermac0/FxConnectProxy/master/LICENSE
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +28,7 @@ namespace FxConnectProxy.ForexConnect.Validators
                 return;
             }
 
-            throw new ArgumentException("Only AccountRow obtained from the client can be used.", "Account");
+            throw new ArgumentException("Only AccountRow obtained from the FxConnectProxy.ForexConnect.FxServiceProxy can be used.", "Account");
         }
     }
 }
