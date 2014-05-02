@@ -54,6 +54,7 @@ namespace FxConnectProxy.Tests.Integrity
             this.AddAllowedConversion<O2GOfferRow, OfferRow, int, InstrumentType>(dict, "InstrumentType");
             this.AddAllowedConversion<O2GOfferRow, OfferRow, string, PriceTradable>(dict, "AskTradable");
             this.AddAllowedConversion<O2GOfferRow, OfferRow, string, PriceTradable>(dict, "BidTradable");
+            this.AddAllowedConversion<O2GOfferRow, OfferRow, string, SubscriptionStatus>(dict, "SubscriptionStatus");
 
             this.AddAllowedConversion<O2GOrderRow, OrderRow, int, ContingencyType>(dict, "ContingencyType");
             this.AddAllowedConversion<O2GOrderRow, OrderRow, string, AccountKind>(dict, "AccountKind");
