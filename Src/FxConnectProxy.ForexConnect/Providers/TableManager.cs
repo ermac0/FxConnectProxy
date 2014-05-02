@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using fxcore2;
-using FxConnectProxy.Utils;
+using FxConnectProxy.ForexConnect.Utils;
 using FxConnectProxy.Validators;
 using FxConnectProxy.Interfaces;
 

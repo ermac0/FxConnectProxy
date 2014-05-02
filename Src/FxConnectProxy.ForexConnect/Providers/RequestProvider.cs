@@ -2,6 +2,7 @@
 // License: https://raw.githubusercontent.com/ermac0/FxConnectProxy/master/LICENSE
 using FxConnectProxy.ForexConnect.Models;
 using FxConnectProxy.Interfaces;
+using FxConnectProxy.ForexConnect.Utils;
 using FxConnectProxy.Validators;
 using fxcore2;
 using System;

@@ -33,6 +33,12 @@ namespace FxConnectProxy.ForexConnect
             this.Session = sessionProvider ??
                 new SessionProvider(loginRulesProvider, tradingSettingsProvider, permissionChecker, requestProvider,
                     tableManager, new SessionProviderValidator(), feedback);
+
+            this.LoginRules = loginRulesProvider;
+            this.PermissionChecker = permissionChecker;
+            this.Requests = requestProvider;
+            this.TableManager = tableManager;
+            this.TradingSettings = tradingSettingsProvider;
         }
 
         public ILoginRulesProvider LoginRules

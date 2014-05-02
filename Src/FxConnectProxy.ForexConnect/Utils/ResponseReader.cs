@@ -7,7 +7,7 @@ using System.Text;
 using fxcore2;
 using FxConnectProxy.Utils;
 
-namespace FxConnectProxy.ForexConnect
+namespace FxConnectProxy.ForexConnect.Utils
 {
     class ResponseReader
     {

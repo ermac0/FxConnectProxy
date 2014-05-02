@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using fxcore2;
 
-namespace FxConnectProxy
+namespace FxConnectProxy.ForexConnect.Utils
 {
     static class Converters
     {
@@ -593,6 +593,23 @@ namespace FxConnectProxy
             return UpdateType.Default;
         }
 
+        public static O2GTableUpdateType GetUpdateType(UpdateType value)
+        {
+            switch (value)
+            {
+                case UpdateType.Delete:
+                    return O2GTableUpdateType.Delete;
+
+                case UpdateType.Insert:
+                    return O2GTableUpdateType.Insert;
+
+                case UpdateType.Update:
+                    return O2GTableUpdateType.Update;
+            }
+
+            return O2GTableUpdateType.UpdateUnknown;
+        }
+
         public static O2GTableType GetTableType(TableType value)
         {
             switch (value)
@@ -673,6 +690,20 @@ namespace FxConnectProxy
             throw new ArgumentOutOfRangeException("value");
         }
 
+        public static O2GMarketStatus GetMarketStatus(MarketStatus value)
+        {
+            switch (value)
+            {
+                case MarketStatus.Closed:
+                    return O2GMarketStatus.MarketStatusClosed;
+
+                case MarketStatus.Open:
+                    return O2GMarketStatus.MarketStatusOpen;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
         public static PermissionStatus GetPermissionStatus(O2GPermissionStatus value)
         {
             switch (value)
@@ -690,6 +721,23 @@ namespace FxConnectProxy
             throw new ArgumentOutOfRangeException("value");
         }
 
+        public static O2GPermissionStatus GetPermissionStatus(PermissionStatus value)
+        {
+            switch (value)
+            {
+                case PermissionStatus.Disabled:
+                    return O2GPermissionStatus.PermissionDisabled;
+
+                case PermissionStatus.Enabled:
+                    return O2GPermissionStatus.PermissionEnabled;
+
+                case PermissionStatus.Hidden:
+                    return O2GPermissionStatus.PermissionHidden;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
         public static PriceUpdateMode GetPriceUpdateMode(O2GPriceUpdateMode value)
         {
             switch (value)
@@ -699,6 +747,20 @@ namespace FxConnectProxy
 
                 case O2GPriceUpdateMode.NoPrice:
                     return PriceUpdateMode.NoPrice;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
+        public static O2GPriceUpdateMode GetPriceUpdateMode(PriceUpdateMode value)
+        {
+            switch (value)
+            {
+                case PriceUpdateMode.Default:
+                    return O2GPriceUpdateMode.Default;
+
+                case PriceUpdateMode.NoPrice:
+                    return O2GPriceUpdateMode.NoPrice;
             }
 
             throw new ArgumentOutOfRangeException("value");
@@ -724,6 +786,26 @@ namespace FxConnectProxy
             throw new ArgumentOutOfRangeException("value");
         }
 
+        public static ReportFormat GetReportFormat(string value)
+        {
+            switch (value)
+            {
+                case Constants.ReportFormat.HTML:
+                    return ReportFormat.HTML;
+
+                case Constants.ReportFormat.PDF:
+                    return ReportFormat.PDF;
+
+                case Constants.ReportFormat.XLS:
+                    return ReportFormat.XLS;
+
+                case Constants.ReportFormat.XML:
+                    return ReportFormat.XML;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
         public static string GetReportType(ReportType value)
         {
             switch (value)
@@ -733,6 +815,20 @@ namespace FxConnectProxy
 
                 case ReportType.PAMM:
                     return Constants.ReportType.PAMM;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
+        public static ReportType GetReportType(string value)
+        {
+            switch (value)
+            {
+                case Constants.ReportType.Default:
+                    return ReportType.Default;
+
+                case Constants.ReportType.PAMM:
+                    return ReportType.PAMM;
             }
 
             throw new ArgumentOutOfRangeException("value");
@@ -767,15 +863,30 @@ namespace FxConnectProxy
             throw new ArgumentOutOfRangeException("value");
         }
 
-        public static O2GPriceUpdateMode GetPriceUpdateMode(PriceUpdateMode value)
+        public static ReportLanguage GetReportLanguage(string value)
         {
             switch (value)
             {
-                case PriceUpdateMode.Default:
-                    return O2GPriceUpdateMode.Default;
+                case Constants.ReportLanguage.ChineseSimplified:
+                    return ReportLanguage.ChineseSimplified;
 
-                case PriceUpdateMode.NoPrice:
-                    return O2GPriceUpdateMode.NoPrice;
+                case Constants.ReportLanguage.ChineseTraditional:
+                    return ReportLanguage.ChineseTraditional;
+
+                case Constants.ReportLanguage.English:
+                    return ReportLanguage.English;
+
+                case Constants.ReportLanguage.French:
+                    return ReportLanguage.French;
+
+                case Constants.ReportLanguage.Japanese:
+                    return ReportLanguage.Japanese;
+
+                case Constants.ReportLanguage.Russian:
+                    return ReportLanguage.Russian;
+
+                case Constants.ReportLanguage.Spanish:
+                    return ReportLanguage.Spanish;
             }
 
             throw new ArgumentOutOfRangeException("value");
@@ -816,6 +927,41 @@ namespace FxConnectProxy
             throw new ArgumentOutOfRangeException("value");
         }
 
+        public static O2GSessionStatusCode GetSessionStatus(SessionStatus value)
+        {
+            switch (value)
+            {
+                case SessionStatus.Connected:
+                    return O2GSessionStatusCode.Connected;
+
+                case SessionStatus.Connecting:
+                    return O2GSessionStatusCode.Connecting;
+
+                case SessionStatus.Disconnected:
+                    return O2GSessionStatusCode.Disconnected;
+
+                case SessionStatus.Disconnecting:
+                    return O2GSessionStatusCode.Disconnecting;
+
+                case SessionStatus.PriceSessionReconnecting:
+                    return O2GSessionStatusCode.PriceSessionReconnecting;
+
+                case SessionStatus.Reconnecting:
+                    return O2GSessionStatusCode.Reconnecting;
+
+                case SessionStatus.SessionLost:
+                    return O2GSessionStatusCode.SessionLost;
+
+                case SessionStatus.TradingSessionRequested:
+                    return O2GSessionStatusCode.TradingSessionRequested;
+
+                case SessionStatus.Unknown:
+                    return O2GSessionStatusCode.Unknown;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
         public static TableManagerStatus GetTableManagerStatus(O2GTableManagerStatus value)
         {
             switch (value)
@@ -828,6 +974,23 @@ namespace FxConnectProxy
                 
                 case O2GTableManagerStatus.TablesLoading:
                     return TableManagerStatus.Loading;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
+        public static O2GTableManagerStatus GetTableManagerStatus(TableManagerStatus value)
+        {
+            switch (value)
+            {
+                case TableManagerStatus.Loaded:
+                    return O2GTableManagerStatus.TablesLoaded;
+
+                case TableManagerStatus.LoadFailed:
+                    return O2GTableManagerStatus.TablesLoadFailed;
+
+                case TableManagerStatus.Loading:
+                    return O2GTableManagerStatus.TablesLoading;
             }
 
             throw new ArgumentOutOfRangeException("value");
@@ -881,6 +1044,60 @@ namespace FxConnectProxy
                 
                 case Timeframe.Weeks1:
                     return Constants.TimeframeId.Weeks1;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
+        public static Timeframe GetTimeframeId(string value)
+        {
+            switch (value)
+            {
+                case "":
+                case null:
+                    return Timeframe.Custom;
+
+                case Constants.TimeframeId.Days1:
+                    return Timeframe.Days1;
+
+                case Constants.TimeframeId.Hours1:
+                    return Timeframe.Hours1;
+
+                case Constants.TimeframeId.Hours2:
+                    return Timeframe.Hours2;
+
+                case Constants.TimeframeId.Hours3:
+                    return Timeframe.Hours3;
+
+                case Constants.TimeframeId.Hours4:
+                    return Timeframe.Hours4;
+
+                case Constants.TimeframeId.Hours6:
+                    return Timeframe.Hours6;
+
+                case Constants.TimeframeId.Hours8:
+                    return Timeframe.Hours8;
+
+                case Constants.TimeframeId.Minutes1:
+                    return Timeframe.Minutes1;
+
+                case Constants.TimeframeId.Minutes15:
+                    return Timeframe.Minutes15;
+
+                case Constants.TimeframeId.Minutes30:
+                    return Timeframe.Minutes30;
+
+                case Constants.TimeframeId.Minutes5:
+                    return Timeframe.Minutes5;
+
+                case Constants.TimeframeId.Months1:
+                    return Timeframe.Months1;
+
+                case Constants.TimeframeId.Tick:
+                    return Timeframe.Tick;
+
+                case Constants.TimeframeId.Weeks1:
+                    return Timeframe.Weeks1;
             }
 
             throw new ArgumentOutOfRangeException("value");
@@ -993,6 +1210,113 @@ namespace FxConnectProxy
             throw new ArgumentOutOfRangeException("value");
         }
 
+        public static RequestParam GetRequestParam(O2GRequestParamsEnum value)
+        {
+            switch (value)
+            {
+                case O2GRequestParamsEnum.AccountID:
+                    return RequestParam.AccountID;
+
+                case O2GRequestParamsEnum.AccountName:
+                    return RequestParam.AccountName;
+
+                case O2GRequestParamsEnum.Amount:
+                    return RequestParam.Amount;
+
+                case O2GRequestParamsEnum.BuySell:
+                    return RequestParam.BuySell;
+
+                case O2GRequestParamsEnum.ClientRate:
+                    return RequestParam.ClientRate;
+
+                case O2GRequestParamsEnum.Command:
+                    return RequestParam.Command;
+
+                case O2GRequestParamsEnum.ContingencyGroupType:
+                    return RequestParam.ContingencyGroupType;
+
+                case O2GRequestParamsEnum.ContingencyID:
+                    return RequestParam.ContingencyID;
+
+                case O2GRequestParamsEnum.CustomID:
+                    return RequestParam.CustomID;
+
+                case O2GRequestParamsEnum.Id:
+                    return RequestParam.Id;
+
+                case O2GRequestParamsEnum.Key:
+                    return RequestParam.Key;
+
+                case O2GRequestParamsEnum.NetQuantity:
+                    return RequestParam.NetQuantity;
+
+                case O2GRequestParamsEnum.OfferID:
+                    return RequestParam.OfferID;
+
+                case O2GRequestParamsEnum.OrderID:
+                    return RequestParam.OrderID;
+
+                case O2GRequestParamsEnum.OrderType:
+                    return RequestParam.OrderType;
+
+                case O2GRequestParamsEnum.PegOffset:
+                    return RequestParam.PegOffset;
+
+                case O2GRequestParamsEnum.PegOffsetLimit:
+                    return RequestParam.PegOffsetLimit;
+
+                case O2GRequestParamsEnum.PegOffsetStop:
+                    return RequestParam.PegOffsetStop;
+
+                case O2GRequestParamsEnum.PegType:
+                    return RequestParam.PegType;
+
+                case O2GRequestParamsEnum.PegTypeLimit:
+                    return RequestParam.PegTypeLimit;
+
+                case O2GRequestParamsEnum.PegTypeStop:
+                    return RequestParam.PegTypeStop;
+
+                case O2GRequestParamsEnum.PrimaryQID:
+                    return RequestParam.PrimaryQID;
+
+                case O2GRequestParamsEnum.Rate:
+                    return RequestParam.Rate;
+
+                case O2GRequestParamsEnum.RateLimit:
+                    return RequestParam.RateLimit;
+
+                case O2GRequestParamsEnum.RateMax:
+                    return RequestParam.RateMax;
+
+                case O2GRequestParamsEnum.RateMin:
+                    return RequestParam.RateMin;
+
+                case O2GRequestParamsEnum.RateStop:
+                    return RequestParam.RateStop;
+
+                case O2GRequestParamsEnum.SubscriptionStatus:
+                    return RequestParam.SubscriptionStatus;
+
+                case O2GRequestParamsEnum.TimeInForce:
+                    return RequestParam.TimeInForce;
+
+                case O2GRequestParamsEnum.TradeID:
+                    return RequestParam.TradeID;
+
+                case O2GRequestParamsEnum.TrailStep:
+                    return RequestParam.TrailStep;
+
+                case O2GRequestParamsEnum.TrailStepStop:
+                    return RequestParam.TrailStepStop;
+
+                case O2GRequestParamsEnum.UnknownParam:
+                    return RequestParam.UnknownParam;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
         public static string GetRequestCommand(RequestCommand value)
         {
             switch (value)
@@ -1029,6 +1353,47 @@ namespace FxConnectProxy
                 
                 case RequestCommand.UpdateMarginRequirements:
                     return fxcore2.Constants.Commands.UpdateMarginRequirements;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
+        public static RequestCommand GetRequestCommand(string value)
+        {
+            switch (value)
+            {
+                case fxcore2.Constants.Commands.CreateOCO:
+                    return RequestCommand.CreateOCO;
+
+                case fxcore2.Constants.Commands.CreateOrder:
+                    return RequestCommand.CreateOrder;
+
+                case fxcore2.Constants.Commands.CreateOTO:
+                    return RequestCommand.CreateOTO;
+
+                case fxcore2.Constants.Commands.DeleteOrder:
+                    return RequestCommand.DeleteOrder;
+
+                case fxcore2.Constants.Commands.EditOrder:
+                    return RequestCommand.EditOrder;
+
+                case fxcore2.Constants.Commands.GetLastOrderUpdate:
+                    return RequestCommand.GetLastOrderUpdate;
+
+                case fxcore2.Constants.Commands.JoinToExistingContingencyGroup:
+                    return RequestCommand.JoinToExistingContingencyGroup;
+
+                case fxcore2.Constants.Commands.JoinToNewContingencyGroup:
+                    return RequestCommand.JoinToNewContingencyGroup;
+
+                case fxcore2.Constants.Commands.RemoveFromContingencyGroup:
+                    return RequestCommand.RemoveFromContingencyGroup;
+
+                case fxcore2.Constants.Commands.SetSubscriptionStatus:
+                    return RequestCommand.SetSubscriptionStatus;
+
+                case fxcore2.Constants.Commands.UpdateMarginRequirements:
+                    return RequestCommand.UpdateMarginRequirements;
             }
 
             throw new ArgumentOutOfRangeException("value");

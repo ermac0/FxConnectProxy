@@ -7,6 +7,7 @@ using System.Text;
 using fxcore2;
 using FxConnectProxy.Validators;
 using FxConnectProxy.Interfaces;
+using FxConnectProxy.ForexConnect.Utils;
 
 namespace FxConnectProxy.ForexConnect
 {
