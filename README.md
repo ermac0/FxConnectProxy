@@ -1,4 +1,4 @@
-# FxConnectProxy
+# FxConnectProxy (Beta)
 FxConnectProxy is a .NET library which creates a layer between ForexConnect and the client (service consumer).
 
 The main goal of the project is to break the dependency between the client code and ForexConnect (.NET wrapper).  
@@ -31,6 +31,9 @@ which could be used for back testing or for simulating market conditions.
 As mentioned before, ForexConnect doesn't allow for creation of its objects by consuming code - it only
 passes on objects obtained from the back-end during an active session.*
 
+## Beta
+The project is still in Beta phase - there could be breaking changes before it is finalized.  
+***So it may NOT be suitable for production.***
 
 ## License
 The license is available at <https://raw.githubusercontent.com/ermac0/FxConnectProxy/master/LICENSE>
