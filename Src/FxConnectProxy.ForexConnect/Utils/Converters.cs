@@ -889,5 +889,44 @@ namespace FxConnectProxy.ForexConnect.Utils
 
             throw new ArgumentOutOfRangeException("value");
         }
+
+        public static SubscriptionStatus GetSubscriptionStatus(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new ArgumentOutOfRangeException("value");
+            }
+
+            switch (value)
+            {
+                case fxcore2.Constants.SubscriptionStatuses.Disable:
+                    return SubscriptionStatus.NotAvailable;
+
+                case fxcore2.Constants.SubscriptionStatuses.Tradable:
+                    return SubscriptionStatus.Available;
+
+                case fxcore2.Constants.SubscriptionStatuses.ViewOnly:
+                    return SubscriptionStatus.ViewOnly;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
+
+        public static string GetSubscriptionStatus(SubscriptionStatus value)
+        {
+            switch (value)
+            {
+                case SubscriptionStatus.NotAvailable:
+                    return fxcore2.Constants.SubscriptionStatuses.Disable;
+
+                case SubscriptionStatus.Available:
+                    return fxcore2.Constants.SubscriptionStatuses.Tradable;
+
+                case SubscriptionStatus.ViewOnly:
+                    return fxcore2.Constants.SubscriptionStatuses.ViewOnly;
+            }
+
+            throw new ArgumentOutOfRangeException("value");
+        }
     }
 }

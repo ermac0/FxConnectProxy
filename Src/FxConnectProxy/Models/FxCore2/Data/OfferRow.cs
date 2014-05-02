@@ -33,7 +33,7 @@ namespace FxConnectProxy
 
         public bool IsSubscriptionStatusValid { get; set; }
 
-        public string SubscriptionStatus { get; set; }
+        public SubscriptionStatus SubscriptionStatus { get; set; }
 
         public bool IsPointSizeValid { get; set; }
 

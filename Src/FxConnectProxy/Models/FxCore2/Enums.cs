@@ -320,4 +320,11 @@ namespace FxConnectProxy
         SetSubscriptionStatus = 10,
         UpdateMarginRequirements = 11,
     }
+
+    public enum SubscriptionStatus
+    {
+        Available = 1,
+        NotAvailable = 2,
+        ViewOnly = 3,
+    }
 }

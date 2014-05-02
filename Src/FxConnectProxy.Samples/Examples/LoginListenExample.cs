@@ -14,6 +14,7 @@ namespace FxConnectProxy.Samples.Examples
         private SessionStatus Status { get; set; }
         private bool Connecting { get; set; }
         private bool ObtainingAccount { get; set; }
+        private bool DisplayRows { get; set; }
 
         protected override void StartInternal()
         {
@@ -82,16 +83,75 @@ namespace FxConnectProxy.Samples.Examples
             else if (this.Status == SessionStatus.Connected && this.Client.Session.TableManagerStatus == TableManagerStatus.Loaded && !this.ObtainingAccount)
             {
                 this.ObtainingAccount = true;
-                var data = this.Client.TableManager.GetTable(new GetTableRequest()
+
+                // Get account information.
                 {
-                    Table = TableType.Accounts,
-                });
+                    var data = this.Client.TableManager.GetTable(new GetTableRequest()
+                    {
+                        Table = TableType.Accounts,
+                    });
+
+                    if (data.Rows != null)
+                    {
+                        var sb = new StringBuilder();
+                        foreach (var row in data.Rows)
+                        {
+                            this.LogAccount(sb, row as AccountRow);
+                        }
+
+                        this.LogInternal(sb.ToString());
+                    }
+                }
+
+                // Get all instruments that account is subscribed to.
+                {
+                    var data = this.Client.TableManager.GetTable(new GetTableRequest()
+                    {
+                        Table = TableType.Offers,
+                    });
+
+                    var sb = new StringBuilder();
+
+                    if (data.Rows != null)
+                    {
+                        var subscibed = data.Rows.Where(x => (x as OfferRow).SubscriptionStatus == SubscriptionStatus.Available).ToList();
+                        if (subscibed.Count > 0)
+                        {
+                            sb.Append("Subscribed instruments: ");
+
+                            var i = subscibed.Count;
+
+                            foreach (var row in subscibed)
+                            {
+                                sb.Append((row as OfferRow).Instrument);
+                                if (--i > 0)
+                                {
+                                    sb.Append(", ");
+                                }
+                            }
+
+                            this.LogInternal(sb.ToString());
+                        }
+                    }
+                }
+
+                // Any messages?
+                {
+                    var data = this.Client.TableManager.GetTable(new GetTableRequest()
+                    {
+                        Table = TableType.Messages,
+                    });
+
+                    this.LogInternal("Number of waiting messages: {0}.", data.Rows == null ? 0 : data.Rows.Count);
+                }
+
+                this.DisplayRows = true;
             }
         }
 
         private void ProcessRow(BaseRow row)
         {
-            if (row == null)
+            if (row == null || !this.DisplayRows)
             {
                 return;
             }
@@ -115,9 +175,30 @@ namespace FxConnectProxy.Samples.Examples
                         sb.AppendFormat("TradeID={0}, Buy/Sell={1}, OpenRate={2}, CloseRate={3}, Profit/Loss={4}", r.TradeID, r.BuySell, r.OpenRate, r.CloseRate, r.GrossPL);
                     }
                     break;
+
+                case RowType.Account:
+                    {
+                        this.LogAccount(sb, row as AccountRow);
+                    }
+                    break;
             }
 
             this.LogInternal(sb.ToString());
+        }
+
+        private void LogAccount(StringBuilder sb, AccountRow row)
+        {
+            if (row == null)
+            {
+                sb.Append("NULL");
+            }
+
+            sb.AppendFormat("| Account: {0} ({1}) | Balance: {2:0.00} | Limit: {3} | Used margin: {4:0.00}", row.AccountName, row.AccountID, row.Balance, row.AmountLimit, row.UsedMargin);
+            if (row is AccountTableRow)
+            {
+                var r = row as AccountTableRow;
+                sb.AppendFormat(" Usable margin: {0:0.00} | Day PL: {1:0.00}", r.UsableMargin, r.DayPL);
+            }
         }
 
         public override string Name
