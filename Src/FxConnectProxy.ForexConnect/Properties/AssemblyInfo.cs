@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("FxConnectProxy.ForexConnect")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCopyright("Copyright © 2014 Patrick Pulka")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
