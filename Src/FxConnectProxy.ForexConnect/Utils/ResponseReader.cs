@@ -187,7 +187,7 @@ namespace FxConnectProxy.ForexConnect.Utils
 
                 if (row != null)
                 {
-                    row.UpdateType = Converters.GetUpdateType(reader.getUpdateType(i));
+                    row.UpdateType = ConvertersInternal.GetUpdateType(reader.getUpdateType(i));
                     rows.Add(row);
                 }
             }
@@ -225,7 +225,7 @@ namespace FxConnectProxy.ForexConnect.Utils
             var rows = new List<LastOrderUpdateRow>();
 
             var r = this.GetRow<LastOrderUpdateRow, O2GOrderRow>(reader.Order);
-            r.UpdateType = Converters.GetUpdateType(reader.UpdateType);
+            r.UpdateType = ConvertersInternal.GetUpdateType(reader.UpdateType);
 
             rows.Add(r);
 

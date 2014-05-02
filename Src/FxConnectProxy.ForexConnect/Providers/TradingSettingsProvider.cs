@@ -114,7 +114,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new GetMarketStatusResponse()
             {
-                Status = Converters.GetMarketStatus(result),
+                Status = ConvertersInternal.GetMarketStatus(result),
             };
         }
 

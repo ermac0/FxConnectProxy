@@ -142,7 +142,7 @@ namespace FxConnectProxy.ForexConnect.Providers
 
             return new GetPriceUpdateModeResponse()
             {
-                PriceUpdateMode = Converters.GetPriceUpdateMode(result),
+                PriceUpdateMode = ConvertersInternal.GetPriceUpdateMode(result),
             };
         }
 
@@ -174,7 +174,7 @@ namespace FxConnectProxy.ForexConnect.Providers
         {
             this.Validator.Validate(request);
 
-            this.FxSession.setPriceUpdateMode(Converters.GetPriceUpdateMode(request.PriceUpdateMode));
+            this.FxSession.setPriceUpdateMode(ConvertersInternal.GetPriceUpdateMode(request.PriceUpdateMode));
         }
 
         public void SetTradingSession(SetTradingSessionRequest request)
@@ -257,7 +257,7 @@ namespace FxConnectProxy.ForexConnect.Providers
 
         private void OnTableManagerStatusChanged(object sender, TableManagerStatusChangedEventArgs e)
         {
-            var status = Converters.GetTableManagerStatus(e.Status);
+            var status = ConvertersInternal.GetTableManagerStatus(e.Status);
 
             this.TableManagerStatus = status;
 
@@ -272,7 +272,7 @@ namespace FxConnectProxy.ForexConnect.Providers
 
         private void OnSessionStatusChanged(object sender, SessionStatusEventArgs e)
         {
-            var status = Converters.GetSessionStatus(e.SessionStatus);
+            var status = ConvertersInternal.GetSessionStatus(e.SessionStatus);
 
             this.SessionStatus = status;
 

@@ -115,7 +115,7 @@ namespace FxConnectProxy.ForexConnect.Providers
 
             foreach (var v in valueMap.Values)
             {
-                var p = Converters.GetRequestParam(v.Param);
+                var p = ConvertersInternal.GetRequestParam(v.Param);
                 switch (v.Type)
                 {
                     case ValueMapItemType.Boolean:
@@ -152,7 +152,7 @@ namespace FxConnectProxy.ForexConnect.Providers
         {
             this.Validator.Validate(request);
 
-            var fxReq = this.FxRequestFactory.createRefreshTableRequest(Converters.GetTableType(request.Table));
+            var fxReq = this.FxRequestFactory.createRefreshTableRequest(ConvertersInternal.GetTableType(request.Table));
 
             this.FxSession.sendRequest(fxReq);
 
@@ -163,7 +163,7 @@ namespace FxConnectProxy.ForexConnect.Providers
         {
             this.Validator.Validate(request);
 
-            var fxReq = this.FxRequestFactory.createRefreshTableRequestByAccount(Converters.GetTableType(request.Table),
+            var fxReq = this.FxRequestFactory.createRefreshTableRequestByAccount(ConvertersInternal.GetTableType(request.Table),
                 request.AccountID);
 
             this.FxSession.sendRequest(fxReq);

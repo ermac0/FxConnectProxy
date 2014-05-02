@@ -38,7 +38,7 @@ namespace FxConnectProxy.ForexConnect
         {
             this.Validator.Validate(request);
 
-            var response = this.Rules.getTableRefreshResponse(Converters.GetTableType(request.Table));
+            var response = this.Rules.getTableRefreshResponse(ConvertersInternal.GetTableType(request.Table));
 
             return new GetTableResponse()
             {
@@ -50,7 +50,7 @@ namespace FxConnectProxy.ForexConnect
         {
             this.Validator.Validate(request);
 
-            var result = this.Rules.isTableLoadedByDefault(Converters.GetTableType(request.Table));
+            var result = this.Rules.isTableLoadedByDefault(ConvertersInternal.GetTableType(request.Table));
 
             return new IsTableLoadedByDefaultResponse()
             {

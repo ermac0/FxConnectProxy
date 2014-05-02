@@ -38,7 +38,7 @@ namespace FxConnectProxy.ForexConnect
         {
             this.Validator.Validate(request);
 
-            var table = this.Manager.getTable(Converters.GetTableType(request.Table));
+            var table = this.Manager.getTable(ConvertersInternal.GetTableType(request.Table));
 
             return new GetTableResponse()
             {

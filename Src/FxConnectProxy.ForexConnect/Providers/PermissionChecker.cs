@@ -35,7 +35,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -47,7 +47,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -59,7 +59,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -71,7 +71,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -83,7 +83,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -95,7 +95,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -107,7 +107,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -119,7 +119,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -131,7 +131,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -143,7 +143,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -155,7 +155,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -167,7 +167,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -179,7 +179,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -191,7 +191,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -203,7 +203,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -215,7 +215,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -227,7 +227,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -239,7 +239,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -251,7 +251,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -263,7 +263,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -275,7 +275,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -287,7 +287,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -299,7 +299,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -311,7 +311,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -323,7 +323,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -335,7 +335,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -347,7 +347,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -357,7 +357,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -367,7 +367,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -377,7 +377,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -387,7 +387,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -397,7 +397,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -407,7 +407,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -417,7 +417,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
 
@@ -427,7 +427,7 @@ namespace FxConnectProxy.ForexConnect
 
             return new PermissionStatusResponse()
             {
-                Status = Converters.GetPermissionStatus(result),
+                Status = ConvertersInternal.GetPermissionStatus(result),
             };
         }
     }

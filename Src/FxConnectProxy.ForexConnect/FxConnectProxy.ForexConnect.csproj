@@ -58,6 +58,7 @@
     <Compile Include="Utils\Converters.cs" />
     <Compile Include="Delegates.cs" />
     <Compile Include="FxServiceProxy.cs" />
+    <Compile Include="Utils\ConvertersInternal.cs" />
     <Compile Include="Utils\Helpers.cs" />
     <Compile Include="Providers\LoginRulesProvider.cs" />
     <Compile Include="Utils\Mappings.cs" />
